@@ -1,22 +1,20 @@
-import java.util.*;
-
-public class Vector2 extends MathObject {
+class Vector2 extends MathObject {
     private int x;
     private int y;
 
     public Vector2(int x, int y) {
-        super(); 
+        super();
         this.x = x;
         this.y = y;
     }
 
     public Vector2(int x, int y, String description) {
-        super(description); 
+        super(description);
         this.x = x;
         this.y = y;
     }
 
-    public int magnitude() {
+    public double magnitude() {  // Use double as return type
         return Math.sqrt(x * x + y * y);
     }
 
@@ -35,9 +33,6 @@ public class Vector2 extends MathObject {
 
     @Override
     public int getDimension() {
-        return 2; 
+        return 2;
     }
-
-    
 }
-
